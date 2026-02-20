@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "multi-azs-terraform"
+    bucket = "terra-git2"
     key = "dev/terraform.tfstate"
     region = "us-east-1"
     use_lockfile = true

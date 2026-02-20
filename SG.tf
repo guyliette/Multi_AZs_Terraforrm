@@ -65,7 +65,7 @@ resource "aws_security_group" "bastion_sg" {
 resource "aws_security_group" "app_server_sg" {
   name        = "app-server-sg-dev"
   description = "App Server Security Group"
-  vpc_id      = aws_vpc.utc_vpc
+  vpc_id      = aws_vpc.utc_vpc.id
 
   ingress {
     description     = "Allow HTTP from ALB SG"

@@ -25,8 +25,8 @@ resource "aws_instance" "app_server1" {
     availability_zone = "us-east-1a"
   
   tags = {
-    Name = appserver-1a
-    env = dev
+    Name = "appserver-1a"
+    env = "dev"
     team = "config management"
   }
 }
@@ -40,8 +40,8 @@ resource "aws_instance" "app_server2" {
     availability_zone = "us-east-1b"
 
     tags = {
-    Name = appserver-1a
-    env = dev
+    Name = "appserver-1a"
+    env = "dev"
     team = config
   }
   

@@ -22,7 +22,6 @@ resource "aws_instance" "app_server1" {
     subnet_id = aws_subnet.private1.id
     vpc_security_group_ids = [ aws_security_group.app_server_sg.id ]
     key_name = aws_key_pair.utc_key.key_name
-    availability_zone = "us-east-1a"
 
     tags = {
      Name = "appserver-1a"
@@ -40,8 +39,7 @@ resource "aws_instance" "app_server2" {
     subnet_id = aws_subnet.private1.id
     vpc_security_group_ids = [ aws_security_group.app_server_sg.id ]
     key_name = aws_key_pair.utc_key.key_name
-    availability_zone = "us-east-1b"
-
+   
     tags = {
     Name = "appserver-1b"
     env = "dev"

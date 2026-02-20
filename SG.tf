@@ -101,7 +101,7 @@ resource "aws_security_group" "app_server_sg" {
 resource "aws_security_group" "database_sg" {
   name        = "database-sg-dev"
   description = "Database Security Group"
-  vpc_id      = aws_vpc.utc_vpc
+  vpc_id      = aws_vpc.utc_vpc.id
 
   ingress {
     description     = "Allow MySQL from App Server SG"

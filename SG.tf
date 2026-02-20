@@ -2,7 +2,7 @@
 resource "aws_security_group" "alb_sg" {
   name        = "alb-sg-dev"
   description = "ALB Security Group"
-  vpc_id   = aws_vpc.utc_vpc
+  vpc_id   = aws_vpc.utc_vpc.id
 
   ingress {
     description = "Allow HTTP"
@@ -38,7 +38,7 @@ resource "aws_security_group" "alb_sg" {
 resource "aws_security_group" "bastion_sg" {
   name        = "bastion-host-sg-dev"
   description = "Bastion Host Security Group"
-  vpc_id      = aws_vpc.utc_vpc
+  vpc_id      = aws_vpc.utc_vpc.id
 
   ingress {
     description = "Allow SSH from my IP"
